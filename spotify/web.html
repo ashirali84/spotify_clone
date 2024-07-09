@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>shahi.freewebhostmost.com</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="/favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <style>
+        /* Global Styles */
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: "Roboto", sans-serif;
+            color: #333;
+            margin: 0;
+            /* Remove default margin */
+        }
+
+        body {
+            font-size: 18px;
+            background-color: #f4f4f4;
+        }
+
+        /* All links */
+        a {
+            color: blue;
+            /* Set link color to blue */
+            text-decoration: none;
+            /* Remove underline */
+        }
+
+        /* Hover effect for links */
+        a:hover {
+            text-decoration: underline;
+            /* Add underline on hover */
+        }
+
+        /* Sidebar Styles */
+        .w3-sidebar {
+            background-color: #007bff;
+            color: #fff;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+        }
+
+        .w3-sidebar a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .w3-sidebar .w3-bar-item {
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+
+        /* Container Styles */
+        .w3-container {
+            padding: 20px;
+        }
+
+        .w3-main {
+            margin-left: 250px;
+            margin-right: 40px;
+        }
+
+        /* Styling for buy buttons */
+        .w3-table a.w3-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            /* Adjust padding as needed */
+            text-decoration: none;
+            border: 2px solid #007bff;
+            /* Add border to make it look like a button */
+            border-radius: 5px;
+            font-size: 16px;
+            /* Adjust font size as needed */
+            transition: background-color 0.3s ease;
+            display: inline-block;
+            /* Ensure the button behaves like a block element */
+        }
+
+        .w3-table a.w3-button:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+            /* Change border color on hover */
+            transform: scale(1.05);
+        }
+
+
+        /* Logo Styles */
+        .logo img {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .logo img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Social Icons Styles */
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .social-icons a:hover {
+            color: #0056b3;
+        }
+
+        /* FAQ Styles */
+        .faq-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border: 2px solid #007bff;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 15px 20px;
+            margin: 0;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-answer {
+            padding: 15px 20px;
+            background-color: #f4f4f4;
+            display: none;
+        }
+
+        .faq-item.open .faq-answer {
+            display: block;
+        }
+
+        .faq-question:hover {
+            background-color: #0056b3;
+        }
+
+        /* Dot Styles */
+        .dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #36C055;
+            animation: pulse 1s infinite alternate;
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.2);
+            }
+        }
+
+        /* Tooltip Styles */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* For Safari */
+        @supports (-webkit-touch-callout: none) {
+            .tooltip:hover .tooltiptext {
+                visibility: hidden;
+                opacity: 0;
+            }
+
+            .tooltip:hover .tooltiptext.active {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+        /* Updated Styles for Flex Boxes */
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            /* Align flex items */
+        }
+
+        .section {
+            flex: 0 0 calc(33.33% - 20px);
+            /* Set width for each flex item */
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 20px;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .section h3 {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
+        /* Styles for first row on mobile */
+        @media screen and (max-width: 768px) {
+            .section {
+                flex: 0 0 100%;
+                /* Set flex items to occupy full width on mobile */
+            }
+        }
+
+        /* SSL Loader and Result */
+        .ssl-loader,
+        .ssl-result {
+            display: flex;
+            align-items: center;
+        }
+
+        .ssl-loader {
+            text-align: center;
+            font-size: 16px;
+            color: #666;
+        }
+
+        .ssl-result {
+            color: #333;
+            font-size: 16px;
+        }
+
+        .ssl-result i {
+            margin-right: 5px;
+        }
+
+        .ssl-result span {
+            vertical-align: middle;
+        }
+
+        /* Updated Styles for Table */
+        .w3-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            /* Set table background to white */
+        }
+
+        .w3-table th,
+        .w3-table td {
+            padding: 8px;
+            text-align: left;
+            font-size: 15px;
+            /* Decrease font size */
+            color: #333;
+            /* Adjust text color for better visibility */
+        }
+
+        .w3-table th {
+            background-color: #007bff;
+            /* Match template's blue color */
+            color: white;
+            text-align: center;
+            /* Center content in the very first row */
+        }
+
+        .w3-table tr:nth-child(even) {
+            background-color: white;
+            /* Set even row background to white */
+        }
+
+        .w3-table tr:hover {
+            background-color: #ffffcc;
+            /* Yellow hover effect */
+        }
+
+        /* Center content in table cells starting from the second column */
+        .w3-table td:nth-child(n + 2) {
+            text-align: center;
+        }
+
+        .section-divider {
+            background-color: #007bff;
+            /* Match template's blue color */
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            line-height: 40px;
+            /* Adjust line height to vertically center the text */
+        }
+
+        /* Center content in table cells starting from the second column */
+        .w3-table td:nth-child(n + 2) {
+            text-align: center;
+        }
+
+        /* Center content in the very first row */
+        .w3-table th:first-child,
+        .w3-table td:first-child(n+2) {
+            text-align: center;
+        }
+
+        /* Sticky First Column for Desktop */
+        @media screen and (min-width: 769px) {
+
+            .w3-table th:first-child,
+            .w3-table td:first-child {
+                background-color: #007bff;
+                /* Match template's blue color */
+                color: white;
+                width: auto;
+                /* Set auto width for the first column */
+            }
+        }
+
+        /* Styles for first column on mobile */
+        @media screen and (max-width: 768px) {
+
+            .w3-table th:first-child,
+            .w3-table td:first-child {
+                background-color: #007bff;
+                /* Match template's blue color */
+                color: white;
+                position: sticky;
+                left: 0;
+                z-index: 0;
+            }
+
+            .w3-table th {
+                background-color: #007bff;
+                /* Match template's blue color */
+                color: white;
+            }
+        }
+
+        /* Header Buttons Styling */
+        .header-buttons a.w3-button {
+            padding: 12px 0;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .header-buttons a.w3-button:hover {
+            background-color: #0056b3;
+        }
+
+        @media screen and (max-width: 600px) {
+            .header-buttons .w3-col {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-top w3-large w3-padding"
+        style="z-index:3;width:250px;font-weight:bold; position: fixed; overflow-x: hidden;" id="mySidebar">
+        <br>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft"
+            style="width:100%;font-size:21px">Close Menu</a>
+        <div class="w3-container">
+            <a href="https://webhostmost.com/clientarea.php?action=services"
+                alt="Hosted by Web Host Most - Professional Shared Web Hosting" target="_blank" class="logo">
+                <img src="/favicon.svg" style="width:75%; height:75%; margin-top:40px; margin-bottom:45px;">
+            </a>
+        </div>
+        <div class="w3-bar-block">
+            <div onclick="scrollToSection('#showcase')" class="w3-bar-item w3-button w3-hover-white">
+                <i class="fa fa-home"></i> Welcome
+            </div>
+            <div onclick="scrollToSection('#get-started')" class="w3-bar-item w3-button w3-hover-white">
+                <i class="fa fa-play"></i> Get Started
+            </div>
+            <div onclick="scrollToSection('#tutorials')" class="w3-bar-item w3-button w3-hover-white">
+                <i class="fa fa-book"></i> Tutorials
+            </div>
+            <div onclick="scrollToSection('#hosting-plans')" class="w3-bar-item w3-button w3-hover-white">
+                <i class="fa fa-cubes"></i> Packages
+            </div>
+            <div onclick="scrollToSection('#faq')" class="w3-bar-item w3-button w3-hover-white">
+                <i class="fa fa-users"></i> FAQ
+            </div>
+
+            <!-- Social Icons -->
+            <div class="w3-bar-item w3-padding" style="position: absolute; bottom: 20px; width: 100%;">
+                <div class="social-icons" style="text-align: left; font-size: 25px;">
+                    <a href="https://t.me/webhostmost" target="_blank"
+                        class="w3-hover-opacity"><i class="fab fa-telegram" style="color: white;"></i></a>
+                    <a href="https://www.youtube.com/@WebHostMost" target="_blank"
+                        class="w3-hover-opacity"><i class="fab fa-youtube" style="color: white;"></i></a>
+                    <a href="https://www.instagram.com/webhostmost" target="_blank"
+                        class="w3-hover-opacity"><i class="fab fa-instagram" style="color: white;"></i></a>
+                    <a href="https://www.facebook.com/webhostmost" target="_blank"
+                        class="w3-hover-opacity"><i class="fab fa-facebook" style="color: white;"></i></a>
+                    <a href="https://www.linkedin.com/company/webhostmost" target="_blank"
+                        class="w3-hover-opacity"><i class="fab fa-linkedin" style="color: white;"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-blue w3-large w3-padding">
+        <a href="javascript:void(0)" class="w3-button w3-blue w3-margin-right" onclick="w3_open()">☰</a>
+        <span>shahi.freewebhostmost.com</span>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+        id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+        <!-- Header -->
+        <div class="w3-container" style="margin-top:75px" id="showcase">
+
+            <h1 class="w3-jumbo"><b>It Works!</b></h1>
+            <h2><span id="domainName"></span> is online <span class="dot"></span></h2>
+            <div class="header-buttons w3-row" style="margin-top: 20px; margin-bottom: 20px;">
+                <div class="w3-col s12 m6 l6 w3-padding-small">
+                    <a href="https://docs.webhostmost.com" class="w3-button w3-block w3-green"
+                        style="border-radius: 5px;">Read our Documentation</a>
+                </div>
+                <div class="w3-col s12 m6 l6 w3-padding-small">
+                    <a href="https://forum.webhostmost.com" class="w3-button w3-block w3-blue"
+                        style="border-radius: 5px;">Discuss on Forum</a>
+                </div>
+            </div>
+            <ul>
+                <li>This is the default <strong>index.html</strong> page.</li>
+                <li>It indicates a successful setup for this domain.</li>
+                <li>Once the website files get uploaded, this page will be overwritten.</li>
+                <li>The location of this page: File Manager > domains > shahi.freewebhostmost.com > public_html > index.html</li>
+                <li>If you are new to the WebHostMost platform, read the basic information on this page to <a
+                        href="/#get-started">get started</a>.</li>
+            </ul>
+            <br>
+        </div>
+
+        <!-- Note Section -->
+        <div class="w3-container" style="background-color: #e0e0e0; padding: 20px; border-left: 6px solid #007bff;">
+            <p><i class="fas fa-info-circle"></i> <b>Note:</b> Default index files recognized by the server are:
+                <strong>index.html</strong> or <strong>index.php</strong> only. The filename is case-sensitive. Names
+                like INDEX.HTML or INDEX.PHP won't work. If no index file present in your /public_html,
+                <strong>403 error</strong> will be displayed.
+            </p>
+        </div>
+        <br>
+
+        <!-- Data Display -->
+        <div class="w3-container" style="margin-top: 20px;">
+            <div class="flex-container">
+                <div class="section">
+                    <h3><i class="fas fa-tachometer-alt"></i> Quick Speed Test:</h3>
+                    <p><strong>Page Load Time:</strong> <span id="load-time">Calculating...</span> seconds</p>
+                    <p><strong>Time To First Byte (TTFB):</strong> <span id="ttfb">Calculating...</span> seconds</p>
+                </div>
+
+                <div class="section">
+                    <h3><i class="fas fa-server"></i> Quick Server Info:</h3>
+                    <p><strong>Server Location:</strong> <span id="server-location">Mumbai, India</span></p>
+                    <p><strong>Server Type:</strong> <span id="server-type">Shared Web Hosting</span></p>
+                </div>
+
+                <!-- SSL Status Section -->
+                <div class="section">
+                    <h3><i class="fas fa-shield-alt"></i> SSL Status:
+                        <span class="tooltip"><i class="fas fa-info-circle fa-sm"></i><span class="tooltiptext">Certificate status provided by SSLLabs.com</span></span>
+                    </h3>
+                    <div class="ssl-loader">
+                        <i class="fas fa-spinner fa-spin"></i> Loading...
+                    </div>
+                    <div class="ssl-result" style="display: none;">
+                        <i id="ssl-icon"></i>
+                        <span id="ssl-text"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Getting Started -->
+        <div class="w3-container" id="get-started" style="margin-top: 75px;">
+            <h2 class="w3-xxxlarge w3-text-black"><b>Getting Started</b></h2>
+            <hr style="width: 50px; border: 5px solid #0056b3;" class="w3-round">
+
+            <div class="flex-container">
+                <!-- Div section 1 -->
+                <div class="section">
+                    <h3>Deploy any CMS</h3>
+                    <p>WordPress, Joomla, Drupal, OpenCart, and others. Install 200+ CMS in one click. Learn how to use
+                        our <a
+                            href="https://docs.webhostmost.com/web-control-panel/website-management/advanced-installer-hub"
+                            target="_blank">Advanced Installer Hub here.</a></p>
+                </div>
+                <!-- Div section 2 -->
+                <div class="section">
+                    <h3>Deploy Node.js</h3>
+                    <p>Node.js ready servers. Use your Web Control Panel to run a Node.js project. Supported
+                        <strong>npm</strong> via Web Terminal.
+                    </p>
+                </div>
+                <!-- Div section 3 -->
+                <div class="section">
+                    <h3>Deploy Python</h3>
+                    <p>Start building Python/Django projects. Access Python via Web Control Panel. Supported
+                        <strong>pip</strong> via Web Terminal.
+                    </p>
+                </div>
+                <!-- Div section 4 -->
+                <div class="section">
+                    <h3>Upload Custom Project</h3>
+                    <p>If you want to host your custom project, simply upload its files into your domain's
+                        <b>/public_html</b> folder.
+                    </p>
+                </div>
+                <!-- Div section 5 -->
+                <div class="section">
+                    <h3>Getting Free SSL</h3>
+                    <p>The SSL is going to be issued automatically within 5-10 minutes after assigning domain name. Read
+                        more about <a
+                            href="https://docs.webhostmost.com/web-control-panel/security-management/ssl-certificates"
+                            target="_blank">SSL management here.</a></p>
+                </div>
+                <!-- Div section 6 -->
+                <div class="section">
+                    <h3>Databases</h3>
+                    <p>Create and manage your SQL Database via Web Control Panel. phpMyAdmin is included. Learn how to
+                        <a href="https://docs.webhostmost.com/web-control-panel/website-management/manage-sql-database"
+                            target="_blank">manage SQL Database here.</a>
+                    </p>
+                </div>
+                <!-- Div section 7 -->
+                <div class="section">
+                    <h3>PHP Settings</h3>
+                    <p>Easily switch between different PHP version that is required for your project. Learn how to <a
+                            href="https://docs.webhostmost.com/web-control-panel/development-tools/manage-php-settings"
+                            target="_blank">manage PHP Settings here.</a></p>
+                </div>
+                <!-- Div section 8 -->
+                <div class="section">
+                    <h3>Use File Manager</h3>
+                    <p>Manage your project files with ease. Upload, download, assign rights and more. Learn how to <a
+                            href="https://docs.webhostmost.com/web-control-panel/files-management/file-manager"
+                            target="_blank">use the File Manager here.</a></p>
+                </div>
+                <!-- Div section 9 -->
+                <div class="section">
+                    <h3>Use Web Terminal</h3>
+                    <p>Get Shell access to manage your projects like a real PRO. Learn how to use <a
+                            href="https://docs.webhostmost.com/web-control-panel/development-tools/using-web-terminal"
+                            target="_blank">Web Terminal here.</a></p>
+                </div>
+            </div>
+
+            <!-- Video Tutorials -->
+            <div class="w3-container" id="tutorials" style="margin-top:75px">
+                <h2 class="w3-xxxlarge w3-text-black"><b>Academy</b></h2>
+                <hr style="width:50px;border:5px solid #0056b3" class="w3-round">
+            </div>
+
+            <!-- Video Tutorials -->
+            <div class="w3-row-padding">
+                <div class="w3-col m4 w3-margin-bottom">
+                    <div class="w3-light-grey">
+                        <iframe width="100%" height="300px"
+                            src="https://www.youtube.com/embed/m4g2YGCFmxM?si=a1RQNwXZKVkurtKg"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <div class="w3-container">
+                            <h3>Create a website</h3>
+                            <p>Learn how to start creating WordPress and other CMS-based websites using WebHostMost.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-col m4 w3-margin-bottom">
+                    <div class="w3-light-grey">
+                        <iframe width="100%" height="300px"
+                            src="https://www.youtube.com/embed/XVESpUh8OwQ?si=4V4-0rwL5rEAyTqB"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <div class="w3-container">
+                            <h3>WordPress Migration</h3>
+                            <p>Learn how to migrate your WordPress website from another hosting provider to us.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-col m4 w3-margin-bottom">
+                    <div class="w3-light-grey">
+                        <iframe width="100%" height="300px"
+                            src="https://www.youtube.com/embed/7FQY7AOPmT4?si=b8JHOTDBXj_pfeBl"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <div class="w3-container">
+                            <h3>Connect With SSH</h3>
+                            <p>Learn how to generate an SSH key and connect to your account to control it over SSH.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hosting Plans Comparison Section -->
+            <div class="w3-container" id="hosting-plans" style="margin-top: 75px;">
+                <h2 class="w3-xxxlarge w3-text-black"><b>Includes</b></h2>
+                <hr style="width: 50px; border: 5px solid #0056b3;" class="w3-round">
+
+                <!-- Placeholder for dynamic table -->
+                <div class="w3-responsive">
+                    <table class="w3-table w3-bordered w3-hoverable">
+                        <!-- Table content goes here -->
+                        <tr class="w3-blue">
+                            <th></th>
+                            <th>125Mb Free</th>
+                            <th>Starter</th>
+                        
+                        
+                            <th>Advanced</th>
+                        
+                            <th>Ultra</th>
+                        
+                        </tr>
+                        <tr>
+                            <td>Disk Space</td>
+                            <td>125 Mb</td>
+                            <td>1 Gb</td>
+                        
+                        
+                            <td>10 Gb</td>
+                        
+                            <td>50 Gb</td>
+                        
+                        </tr>
+                        <tr>
+                            <td>Domains Assigned</td>
+                            <td><i class="fa fa-infinity"></i></td>
+                            <td><i class="fa fa-infinity"></i></td>
+                        
+                        
+                            <td><i class="fa fa-infinity"></i></td>
+                        
+                            <td><i class="fa fa-infinity"></i></td>
+                        
+                        </tr>
+                        <tr>
+                            <td>Subdomains</td>
+                            <td><i class="fa fa-infinity"></i></td>
+                            <td><i class="fa fa-infinity"></i></td>
+                        
+                        
+                            <td><i class="fa fa-infinity"></i></td>
+                        
+                            <td><i class="fa fa-infinity"></i></td>
+                        
+                        </tr>
+                        <tr>
+                            <td>Bandwidth</td>
+                            <td><i class="fa fa-infinity"></i></td>
+                            <td><i class="fa fa-infinity"></i></td>
+                        
+                        
+                            <td><i class="fa fa-infinity"></i></td>
+                        
+                            <td><i class="fa fa-infinity"></i></td>
+                        
+                        </tr>
+                        <tr>
+                            <td>Inodes</td>
+                            <td><i class="fa fa-infinity"></i></td>
+                            <td><i class="fa fa-infinity"></i></td>
+                        
+                        
+                            <td><i class="fa fa-infinity"></i></td>
+                        
+                            <td><i class="fa fa-infinity"></i></td>
+                        
+                        </tr>
+                        <tr>
+                            <td>SQL Databases</td>
+                            <td><i class="fa fa-infinity"></i></td>
+                            <td><i class="fa fa-infinity"></i></td>
+                        
+                        
+                            <td><i class="fa fa-infinity"></i></td>
+                        
+                            <td><i class="fa fa-infinity"></i></td>
+                        
+                        </tr>
+                        <tr>
+                            <td>Free SSL Certificates</td>
+                            <td><i class="fa fa-check" style="color: green;"></i></td>
+                            <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                            <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                            <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        </tr>
+                        <tr>
+                            <td>Instant Service Activation</td>
+                            <td><i class="fa fa-check" style="color: green;"></i></td>
+                            <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                            <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                            <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        </tr>
+                        <tr>
+                            <td>Free Staging Domain</td>
+                            <td><i class="fa fa-check" style="color: green;"></i></td>
+                            <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                            <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                            <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        </tr>
+                        <tr>
+                            <td>Free Domain Registration
+                                <span class="tooltip"><i class="fas fa-info-circle fa-sm"></i><span class="tooltiptext">1 Year Billing Cycle required.</span></span>
+                            </td>
+                            <td><i class="fa fa-times" style="color: #e01b24;"></i></td>
+                            <td><i class="fa fa-times" style="color: #e01b24;"></i></td>
+                        
+                        
+                            <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                            <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        </tr>
+                        <tr>
+                            <td>Free Domain Transfer
+                                <span class="tooltip"><i class="fas fa-info-circle fa-sm"></i><span class="tooltiptext">1 Year Billing Cycle required.</span></span>
+                            </td>
+                            <td><i class="fa fa-times" style="color: #e01b24;"></i></td>
+                            <td><i class="fa fa-times" style="color: #e01b24;"></i></td>
+                        
+                        
+                            <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                            <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        </tr>
+                        <tr>
+                            <td>Free Daily Backups</td>
+                            <td><i class="fa fa-infinity"></i></td>
+                            <td><i class="fa fa-infinity"></i></td>
+                        
+                        
+                            <td><i class="fa fa-infinity"></i></td>
+                        
+                            <td><i class="fa fa-infinity"></i></td>
+                        
+                        </tr>
+                        <tr>
+                            <td>Email Accounts</td>
+                            <td><i class="fa fa-check" style="color: green;"></i></td>
+                            <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                            <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                            <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        </tr>
+                        <tr>
+                            <td>14 Days Money-Back Guarantee</td>
+                            <td><i class="fa fa-times" style="color: #e01b24;"></i></td>
+                            <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                            <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                            <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        </tr>
+                        <tr>
+                            <td>Uptime Guarantee</td>
+                            <td>99.99%</td>
+                            <td>99.99%</td>
+                        
+                        
+                            <td>99.99%</td>
+                        
+                            <td>99.99%</td>
+                        
+                        </tr>
+                        <tr>
+                            <td>24/7 Support</td>
+                            <td><i class="fa fa-check" style="color: green;"></i></td>
+                            <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                            <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                            <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        </tr>
+                        </table>
+                        </div>
+                        </div>
+                        
+                        <div class="w3-container" id="hosting-plans" style="margin-top: 75px;">
+                            <h2 class="w3-xxxlarge w3-text-black"><b>Tech Specs</b></h2>
+                            <hr style="width: 50px; border: 5px solid #0056b3;" class="w3-round">
+                        
+                            <!-- Placeholder for dynamic table -->
+                            <div class="w3-responsive">
+                                <table class="w3-table w3-bordered w3-hoverable">
+                                    <!-- Table content goes here -->
+                                    <tr class="w3-blue">
+                                        <th></th>
+                                        <th>125Mb Free</th>
+                                        <th>Starter</th>
+                        
+                                        <th>Advanced</th>
+                        
+                                        <th>Ultra</th>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>CPU Cores</td>
+                                        <td>1 vCPU</td>
+                                        <td>2 vCPU</td>
+                        
+                        
+                                        <td>4 vCPU</td>
+                        
+                                        <td>4 vCPU</td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>RAM</td>
+                                        <td>128 Mb</td>
+                                        <td>1 GB</td>
+                        
+                        
+                                        <td>2 GB</td>
+                        
+                                        <td>2 GB</td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>PHP Versions
+                                            <span class="tooltip"><i class="fas fa-info-circle fa-sm"></i><span class="tooltiptext">Supported on *Fully Featured servers only.</span></span>
+                                        </td>
+                                        <td>4.4 - 8.3</td>
+                                        <td>4.4 - 8.3</td>
+                        
+                        
+                                        <td>4.4 - 8.3</td>
+                        
+                                        <td>4.4 - 8.3</td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>MySQL Version</td>
+                                        <td>MariaDB 10.11</td>
+                                        <td>MariaDB 10.11</td>
+                        
+                        
+                                        <td>MariaDB 10.11</td>
+                        
+                                        <td>MariaDB 10.11</td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>Node.js Versions
+                                            <span class="tooltip"><i class="fas fa-info-circle fa-sm"></i><span class="tooltiptext">Supported on *Fully Featured servers only.</span></span>
+                                        </td>
+                                        <td>6.17 - 20.10</td>
+                                        <td>6.17 - 20.10</td>
+                        
+                        
+                                        <td>6.17 - 20.10</td>
+                        
+                                        <td>6.17 - 20.10</td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>Python Versions
+                                            <span class="tooltip"><i class="fas fa-info-circle fa-sm"></i><span class="tooltiptext">Supported on *Fully Featured servers only.</span></span>
+                                        </td>
+                                        <td>2.7 - 3.9</td>
+                                        <td>2.7 - 3.9</td>
+                        
+                        
+                                        <td>2.7 - 3.9</td>
+                        
+                                        <td>2.7 - 3.9</td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>Accout Isolation</td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>LiteSpeed Cache</td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>HTTP/3</td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>MySQL/MariaDB</td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>mongoDB
+                                            <span class="tooltip"><i class="fas fa-info-circle fa-sm"></i><span class="tooltiptext">Supported on *Fully Featured servers only.</span></span>
+                                        </td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>PostgreSQL
+                                            <span class="tooltip"><i class="fas fa-info-circle fa-sm"></i><span class="tooltiptext">Supported on *Fully Featured servers only.</span></span>
+                                        </td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>APC/OPCache</td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>Redis</td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>Gzip/Brotli Compression</td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>Keep-Alive</td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div class="w3-container" id="hosting-plans" style="margin-top: 75px;">
+                            <h2 class="w3-xxxlarge w3-text-black"><b>Features</b></h2>
+                            <hr style="width: 50px; border: 5px solid #0056b3;" class="w3-round">
+                        
+                            <!-- Placeholder for dynamic table -->
+                            <div class="w3-responsive">
+                                <table class="w3-table w3-bordered w3-hoverable">
+                                    <!-- Table content goes here -->
+                                    <tr class="w3-blue">
+                                        <th></th>
+                                        <th>125Mb Free</th>
+                                        <th>Starter</th>
+                        
+                        
+                                        <th>Advanced</th>
+                        
+                                        <th>Ultra</th>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>NVMe Storage</td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>DDoS Protection</td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>Free WebHostMost CDN</td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>Multiple Server Locations</td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>Softaculous 1-Click Install</td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>IMAP/POP3/SMTP</td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>PHP Selector</td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>Application Autoupdates</td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>Remote MySQL Access</td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>phpMyAdmin</td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>phpPgAdmin
+                                            <span class="tooltip"><i class="fas fa-info-circle fa-sm"></i><span class="tooltiptext">Supported by *Fully Featured servers only.</span></span>
+                                        </td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>Bash Support</td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>Perl Support</td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>Laravel</td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>Symfony</td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>SSH Access</td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>Mod_rewrite for SEO URLs</td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>Preinstalled GIT</td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>Custom Cron Jobs</td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                        <td><i class="fa fa-check" style="color: green;"></i></td>
+                        
+                                    </tr>
+                                    <tr>
+                                        <td>FTP Accounts</td>
+                                        <td><i class="fa fa-times" style="color: #e01b24;"></i></td>
+                                        <td><i class="fa fa-times" style="color: #e01b24;"></i></td>
+                        
+                        
+                                        <td><i class="fa fa-times" style="color: #e01b24;"></i></td>
+                        
+                                        <td><i class="fa fa-times" style="color: #e01b24;"></i></td>
+                        
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+            <!-- FAQ Section -->
+            <div class="w3-container" id="faq" style="margin-top:75px">
+                <h2 class="w3-xxxlarge w3-text-black"><b>Frequently Asked Questions</b></h2>
+                <hr style="width:50px;border:5px solid #0056b3" class="w3-round">
+
+                <div class="faq-container">
+                    <div class="faq-item open">
+                        <h3 class="faq-question">Can I host multiple domains using only 1 service account?</h3>
+                        <div class="faq-answer">
+                            <p>Yes! You can have as many domains assign to your service account, as you wish. As long as
+                                you have enough Disk Space for all of your projects, you'll be just fine. You can also
+                                have unlimited number of subdomains for each assign domain.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">Do you support Node.js?</h3>
+                        <div class="faq-answer">
+                            <p>Yes! Besides PHP projects, we also support Node.js, Python/Django, and Perl. You have the
+                                entire functionality with each plan, even free service. No limits. It's your tool, your
+                                environment.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">How to get a Free Domain name?</h3>
+                        <div class="faq-answer">
+                            <p>We offer free domain (.link) for 2Gb & 5Gb plans, only if you choose yearly.</p>
+                            <p> (.com .eu .net .org .link .cfd .xyz) are available for 10Gb, 25Gb, 50Gb, and 100Gb plans
+                                only if you choose yearly.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">What is Staging Domain?</h3>
+                        <div class="faq-answer">
+                            <p>We offer a Forever-Free subdomain that anybody can reserve. It'll look like:
+                                yourdomain.freewebhostmost.com There are no limitations in terms of functionality for
+                                this domain. You can use it with any plan. <br><br><b>Note:</b> You can't have more than
+                                1 free subdomain in 1 service account.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">What Databases do you offer?</h3>
+                        <div class="faq-answer">
+                            <p>We offer SQL and non-SQL databases for all. MySQL, MariaDB, mongoDB, PostgreSQL - all
+                                available for you. We also offer GUI panels for Database management.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">Why FTP is disabled?</h3>
+                        <div class="faq-answer">
+                            <p>FTP is not secure. SFTP is not secure eaither. The actual protocol is limiting your
+                                speed. We offer SSH insted. For quicker file uploads, simply use Drag'n Drop feture from
+                                our File manager.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">What does Fully Featured Server means?</h3>
+                        <div class="faq-answer">
+                            <p>We offer multiple server locations across the globe. However, some servers do not share
+                                same features becasue of the difference in back-end software.</p>
+                        </div>
+                    </div>
+                    <!-- Add more questions and answers as needed -->
+                </div>
+            </div>
+            <!-- End page content -->
+
+            <!-- Footer Container -->
+            <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px">
+                <p class="w3-right"><strong>Your IP:</strong> <span id="ip-address">Fetching...</span> | Hosted by <a
+                        href="https://webhostmost.com" title="Web Host Most" target="_blank"
+                        class="w3-hover-opacity">WebHostMost</a>
+                </p>
+            </div>
+            <script>
+                // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Fetch IP address using a free service
+        fetch('https://api.ipify.org?format=json')
+        .then(response => response.json())
+        .then(data => {
+        document.getElementById('ip-address').textContent = data.ip;
+        })
+        .catch(error => {
+        console.error('Error fetching IP address:', error);
+        });
+
+        // Calculate page load time and TTFB
+            document.addEventListener('DOMContentLoaded', function() {
+            const loadEndTime = new Date().getTime();
+            const startTime = performance.timing.navigationStart;
+            const loadTime = (loadEndTime - startTime) / 1000; // Convert milliseconds to seconds
+            document.getElementById('load-time').textContent = loadTime.toFixed(2); // Displaying with two decimal places
+
+        // Calculate TTFB
+        const ttfb = (performance.timing.responseStart - performance.timing.navigationStart) / 1000; // Convert milliseconds to seconds
+        document.getElementById('ttfb').textContent = ttfb.toFixed(2); // Displaying with two decimal places
+        });
+
+        // JavaScript to toggle the visibility of FAQ answers
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+            const answer = question.nextElementSibling;
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+
+        // Function to scroll smoothly to a specific section after closing the sidebar
+        function scrollToSection(target) {
+        w3_close(); // Close the sidebar
+        setTimeout(function() {
+        document.querySelector(target).scrollIntoView({
+        behavior: 'smooth'
+        });
+        }, 250); // Add a slight delay for closing the sidebar animation to complete
+        }
+
+// Function to check SSL certificate status
+function checkSSL() {
+const originDomain = window.location.hostname;
+const proxyUrl = 'https://api.allorigins.win/raw?url=';
+const apiUrl = `https://api.ssllabs.com/api/v3/analyze?host=${originDomain}`;
+
+fetch(proxyUrl + apiUrl)
+.then(response => response.text())
+.then(data => {
+console.log('SSL API Response:', data); // Log API response
+try {
+const jsonData = JSON.parse(data); // Attempt to parse JSON
+// Check if SSL check is successful
+if (jsonData.status === 'READY') {
+document.getElementById('ssl-icon').className = 'fas fa-lock'; // Change class to set the lock icon
+document.getElementById('ssl-text').innerHTML = `SSL certificate is valid for ${originDomain}`;
+document.getElementById('ssl-icon').style.color = 'green'; // Set icon color to green
+} else {
+document.getElementById('ssl-icon').className = 'fas fa-exclamation-triangle'; // Change class to set the warning icon
+document.getElementById('ssl-text').innerHTML = `SSL certificate is invalid or not found for ${originDomain}. <br><a
+    href="https://webhostmost.com/knowledgebase/19/SSL-Certificates---Free-and-Business-SSL-Management.html" target="_blank">Learn how to enable it</a>`;
+document.getElementById('ssl-icon').style.color = 'red'; // Set icon color to red
+}
+} catch (error) {
+console.error('Error parsing JSON:', error);
+// Show SSL check error
+document.getElementById('ssl-text').innerText = `Error checking SSL: Unexpected response format`;
+document.getElementById('ssl-icon').style.color = 'red'; // Set icon color to red
+}
+// Show SSL result
+document.querySelector('.ssl-loader').style.display = 'none';
+document.querySelector('.ssl-result').style.display = 'block';
+})
+.catch(error => {
+console.error('Error checking SSL:', error);
+// Show SSL check error
+document.getElementById('ssl-text').innerText = `Error checking SSL: ${error.message}`;
+document.getElementById('ssl-icon').style.color = 'red'; // Set icon color to red
+// Hide SSL loader
+document.querySelector('.ssl-loader').style.display = 'none';
+// Show SSL result
+document.querySelector('.ssl-result').style.display = 'block';
+});
+}
+
+// Call SSL check function
+checkSSL();
+
+
+        // Get the current domain name
+        var currentDomain = window.location.hostname;
+
+        // Find the span element where you want to insert the domain name
+        var domainSpan = document.getElementById("domainName");
+
+        // Insert the domain name into the span element
+        domainSpan.textContent = currentDomain;
+
+// Enable tooltips on mobile devices
+$('.tooltip').on('click', function() {
+$(this).find('.tooltiptext').toggleClass('show');
+});
+            </script>
+
+</body>
+
+</html>
